@@ -17,9 +17,9 @@
                 "arn:aws:ec2:us-east-1:*:instance/*",
                 "arn:aws:ec2:us-east-1:*:key-pair/*",
                 "arn:aws:ec2:us-east-1:*:security-group/*",
-                "arn:aws:ec2:us-east-1:*:subnet/*",   
+                "arn:aws:ec2:us-east-1:*:subnet/*", 
 
-                "arn:aws:ec2:us-east-1:*:vpc/*"   
+                "arn:aws:ec2:us-east-1:*:vpc/*"
 
             ]
         }
