@@ -1,0 +1,21 @@
+
+
+
+#create new users
+aws iam create-user --user-name user1
+aws iam create-user --user-name user2
+aws iam create-user --user-name user3
+aws iam create-user --user-name user4
+
+
+#create IAM group
+aws iam create-group --group-name dev
+
+
+#add users to group
+aws iam add-user-to-group --group-name dev --user-name user1
+aws iam add-user-to-group --group-name dev --user-name user2
+
+#create a new policy and attach policy to group
+aws iam create-policy --policy-document file://dev-policy.json --policy-name DevPolicy
+aws iam attach-group-policy --group-name dev --policy-arn arn:aws:iam::<your_account_id>:policy/DevPolicy

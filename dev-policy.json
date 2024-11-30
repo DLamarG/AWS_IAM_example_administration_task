@@ -2,26 +2,14 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "VisualEditor0",
             "Effect": "Allow",
-            "Action": [
-                "ec2:Describe*",
-                "ec2:LaunchInstance*",
-                "ec2:TerminateInstances*",
-                "ec2:MonitorInstances*",
-                "ec2:DescribeInstances*",
-                "ec2:RunInstances*"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-east-1:*:image/*",
-                "arn:aws:ec2:us-east-1:*:instance/*",
-                "arn:aws:ec2:us-east-1:*:key-pair/*",
-                "arn:aws:ec2:us-east-1:*:security-group/*",
-                "arn:aws:ec2:us-east-1:*:subnet/*", 
-
-                "arn:aws:ec2:us-east-1:*:vpc/*"
-
-            ]
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": "us-east-2"
+                }
+            }
         }
     ]
 }
